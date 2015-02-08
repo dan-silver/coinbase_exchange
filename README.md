@@ -16,7 +16,7 @@ Or, include this in your gemfile:
 ```ruby
 require "coinbase_exchange"
 
-cbe = CoinbaseExchange.new(API_KEY, API_SECRET, API_PASSPHRASE)
+cbe = CoinbaseExchange.new API_KEY, API_SECRET, API_PASSPHRASE
 
 
 # Account balance
