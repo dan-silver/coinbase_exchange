@@ -53,3 +53,4 @@ end
 
 ```
 
+Use at your own risk. I assume no liability for gains or losses you incur while using this gem.
