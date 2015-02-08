@@ -19,7 +19,7 @@ require "coinbase_exchange"
 cbe = CoinbaseExchange.new(API_KEY, API_SECRET, API_PASSPHRASE)
 
 
-# get your account balances
+# Account balance
 cbe.get('accounts')
 # => [{"id"=>"000ea663...", "currency"=>"USD", "balance"=>"90.0000114750000000", "hold"=>"0.0000000000000000", "available"=>"0.9000114750000000", "profile_id"=>"4409df27..."}, {"id"=>"8bfe", "currency"=>"BTC", "balance"=>"9.4426882700000000", "hold"=>"0.0000000000000000", "available"=>"5.4426882700000000", "profile_id"=>"a8f2d8..."}] 
 
@@ -31,6 +31,9 @@ cbe.post 'orders', {
     "product_id" => "BTC-USD"
 }
 
+# Product tickers
+cbe.get('products/BTC-USD/ticker')
+# => {"trade_id"=>125681, "price"=>"226.20000000", "size"=>"0.01570000", "time"=>"2015-02-08T04:46:17.352746Z"}
 ```
 
 Block syntax is fully supported
