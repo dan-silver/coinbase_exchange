@@ -4,6 +4,12 @@ The library wraps the http request and message signing.  I may add more features
 
 Check their documentation at https://docs.exchange.coinbase.com/ to get started.
 
+## Installation
+```gem install coinbase_exchange```
+
+Or, include this in your gemfile:
+```gem 'coinbase_exchange', '~> 0.0.3'```
+
 ## Example
 ```ruby
 require "coinbase_exchange"
