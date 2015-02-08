@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/coinbase_exchange.svg)](http://badge.fury.io/rb/coinbase_exchange)
 # Coinbase Exchange Ruby Client
 Currently, the library just wraps the http request and message signing.  I may add more features in the future.
 
