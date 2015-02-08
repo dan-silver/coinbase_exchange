@@ -10,18 +10,37 @@ require "coinbase_exchange"
 
 cbe = CoinbaseExchange.new(API_KEY, API_SECRET, API_PASSPHRASE)
 
-puts cbe.get('accounts')
 
-# Or, with block syntax
-cbe.get('accounts') do |response|
-  puts response
-end
+# get your account balances
+cbe.get('accounts')
+# => [{"id"=>"000ea663...", "currency"=>"USD", "balance"=>"90.0000114750000000", "hold"=>"0.0000000000000000", "available"=>"0.9000114750000000", "profile_id"=>"4409df27..."}, {"id"=>"8bfe", "currency"=>"BTC", "balance"=>"9.4426882700000000", "hold"=>"0.0000000000000000", "available"=>"5.4426882700000000", "profile_id"=>"a8f2d8..."}] 
 
-
-puts cbe.post 'orders', {
+# Create an order
+cbe.post 'orders', {
     "size" => 1.01,
     "price" => 1.100,
     "side" => "buy",
     "product_id" => "BTC-USD"
 }
+
 ```
+
+Block syntax is fully supported
+
+```ruby
+
+cbe.get('accounts') do |response|
+  puts response
+end
+
+cbe.post('orders', {
+    "size" => 1.01,
+    "price" => 1.100,
+    "side" => "buy",
+    "product_id" => "BTC-USD"
+}) do |response|
+  puts response
+end
+
+```
+
