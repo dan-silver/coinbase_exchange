@@ -2,8 +2,6 @@
 # Coinbase Exchange Ruby Client
 The library wraps the http request and message signing.  Create an account at https://exchange.coinbase.com to get started.
 
-### NOTE - As a launch promo, there are [no Coinbase Exchange trading fees](http://blog.coinbase.com/post/109202118547/coinbase-launches-first-regulated-bitcoin-exchange) through the end of March.
-
 ## Installation
 ```gem install coinbase_exchange```
 
